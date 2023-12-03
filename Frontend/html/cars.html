@@ -124,14 +124,12 @@
         var carDetails = document.getElementById(carId);
         var allCarDetails = document.querySelectorAll('.car-details');
 
-        // Hide all other car details
         allCarDetails.forEach(function (detail) {
             if (detail.id !== carId) {
                 detail.style.display = 'none';
             }
         });
 
-        // Toggle the display for the clicked car details
         carDetails.style.display = (carDetails.style.display === 'none' || carDetails.style.display === '') ? 'block' : 'none';
     }
 </script>
