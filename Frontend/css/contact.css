@@ -82,3 +82,15 @@ body {
 .contact-details {
     margin-top: 20px;
 }
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.map-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
