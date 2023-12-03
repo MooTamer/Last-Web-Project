@@ -1,0 +1,118 @@
+
+<html>
+  <head>
+    <title>Login</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script src="https://ajax.googleapis.com.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/login.css">
+
+  </head>
+  <body scroll="no" style="overflow: hidden">
+    <div *ngIf="currentComponent === 'home'">
+      <app-home></app-home>
+    </div>
+  
+    <div *ngIf="currentComponent === 'login'">
+      <app-login></app-login>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="../assimages/logo1.png"></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <a class="nav-item" href="home.html">Home</a>
+          <li class="nav-item">
+            <a class="nav-link" href="manufacturers.html">Car Manufacturers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cars.html">Cars</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="purchase.html">Purchase</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="signup.html">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="logout.html">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section
+      class="w3-container w3-content w3-center"
+      style="max-width: 1500px; padding: 0; margin-top: -16px"
+    ></section>
+    <header class="login-header">
+      <i class="fa fa-facebook-official w3-hover-opacity">&nbsp;</i>
+      <i class="fa fa-instagram w3-hover-opacity">&nbsp;</i>
+      <i class="fa fa-snapchat w3-hover-opacity">&nbsp;</i>
+      <i class="fa fa-pinterest-p w3-hover-opacity">&nbsp;</i>
+      <i class="fa fa-twitter w3-hover-opacity">&nbsp;</i>
+      <i class="fa fa-linkedin w3-hover-opacity">&nbsp;</i>
+
+      <h1 class="login-title">LOGIN</h1>
+      <form class="login-form" method="post" action="/login">
+        <div class="form-group">
+          <label for="email" class="login-label">Email</label>
+          <input
+            type="email"
+            class="login-input"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="password" class="login-label">Password</label>
+          <input
+            type="password"
+            class="login-input"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            required
+          />
+        </div>
+        <button id="login-button" (click)="onLoginClick()">Login</button>
+      </form>
+      <p class="login-register-text">
+        Don't have an account?
+        <a href="/register" class="login-register-link">Register</a>
+      </p>
+      <p class="login-register-text">
+        Forget your password?
+        <a href="/forgetpassword" class="login-register-link">Reset password</a>
+      </p>
+    </header>
+  </body>
+</html>

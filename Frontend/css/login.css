@@ -1,0 +1,188 @@
+body,
+h1 {
+  font-family: "Raleway", Arial, sans-serif;
+  height: 100%;
+}
+
+h1 {
+  letter-spacing: 6px;
+}
+
+.w3-row-padding img {
+  margin-bottom: 12px;
+  width: 100%;
+  height: auto;
+}
+
+.w3-row-padding w3-grayscale {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1500px;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+}
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1vh 9vw;
+  line-height: 1.5;
+  backdrop-filter: blur(10px);
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+
+.nav-links li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+body {
+  background-image: url("../images/Home4.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.w3-display-container:hover .mySlides {
+  opacity: 1;
+}
+
+.w3-display-bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.w3-button {
+  cursor: pointer;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.login-header {
+  text-align: center;
+  z-index: 999;
+  background-size: cover;
+  background-position: center;
+  max-width: 100%;
+  overflow: hidden;
+  width: 100%;
+  position: absolute;
+  padding: 1vh 20vw;
+  display: flow;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 7vh;
+  margin-bottom: 7vh;
+}
+/* @media only screen and (max-width: 767px) {
+  
+        .login-header{
+      
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+         }
+      } */
+
+.login-title {
+  font-size: 3em;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  width: 100%;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.login-label {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.login-input {
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border: none;
+  border-radius: 31px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 400px;
+}
+
+#login-button {
+  padding: 0.5em 1em;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 31px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#login-button:hover {
+  background-color: #0056b3;
+}
+
+.login-register-text {
+  margin-top: 2em;
+  font-size: 1.2em;
+}
+
+.login-register-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login-register-link:hover {
+  text-decoration: underline;
+}
+
+label[for="password"],
+label[for="email"],
+label[for="login-register-text"],
+.login-register-text {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  padding: 5px;
+  border-radius: 31px;
+}
