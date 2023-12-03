@@ -1,6 +1,6 @@
 body,
 h1 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Raleway",Arial, sans-serif;
 }
 body,
 html {
@@ -11,13 +11,13 @@ html {
   min-height: 100%;
   background-position: center;
   background-size: cover;
-  /* backdrop-filter: blur(20px); */
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+  backdrop-filter: blur(20px);
+  
 }
 .w3-display-middle {
   background-size: cover;
   background-position: center;
-
+  backdrop-filter: blur(2px);
 }
 .logo {
   width: 100px;
@@ -34,8 +34,7 @@ nav {
   left: 0;
   right: 0;
   width: 100%;
-  color: #fff;
-  padding: 20px;
+  padding: 1vh 9vw;
   line-height: 1.5;
   backdrop-filter: blur(10px);
 }
@@ -44,6 +43,7 @@ nav {
   list-style: none;
   margin: 0;
   padding: 0;
+  font-size: 20px;
 }
 .nav-links li:last-child {
   float: right;

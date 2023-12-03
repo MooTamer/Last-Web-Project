@@ -47,6 +47,7 @@ nav {
   font-size: 20px;
 }
 
+
 .nav-links li {
   display: inline-block;
   margin-right: 20px;
@@ -56,13 +57,14 @@ nav {
   color: #fff;
   text-decoration: none;
 }
-
 body {
   background-image: url("../images/Home4.jpg");
+
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
+
 
 .w3-display-container:hover .mySlides {
   opacity: 1;
