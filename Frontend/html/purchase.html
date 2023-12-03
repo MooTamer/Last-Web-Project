@@ -3,25 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/purchase.css">
+    <link rel="stylesheet" href="../css/navbar.css">
     
     <title>D&R Auto Sales</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="manufacturers.html">Car Manufacturers</a></li>
-                <li class="nav-item"><a class="nav-link" href="cars.html">Cars</a></li>
-                <li class="nav-item"><a class="nav-link" href="purchase.html">Purchase</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-                <li class="nav-item"><a class="nav-link" href="signup.html">Sign Up</a></li>
-                <li class="nav-item"><a class="nav-link" href="logout.html">Logout</a></li>
-            </ul>
-        </div>
-    </nav>
+
+    <div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+     </div>
+    <div class="navbar">
+        <a href="home.html">Home</a>
+        <a href="manufacturers.html">Car Manufacturers</a>
+        <a href="cars.html">Cars</a>
+        <a class="active" href="purchase.html">Purchase</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+        <a href="#">Logout</a>
+    </div>
+
+    <form class="purchase-form">
+        <h2>Purchase</h2>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+
+        <label for="nationalID">National ID:</label>
+        <input type="text" id="nationalID" name="nationalID" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="contactNumber">Contact Number:</label>
+        <input type="tel" id="contactNumber" name="contactNumber" required>
+
+        <button type="purchase">Purchase</button>
+    </form>
     
 
 </body>
