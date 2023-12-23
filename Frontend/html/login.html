@@ -24,7 +24,6 @@
     />
 
     <script src="https://ajax.googleapis.com.5.1/jquery.min.js"></script>
- 
   </head>
 
   <body scroll="no" style="overflow: hidden">
@@ -123,5 +122,33 @@
         <a href="/forgetpassword" class="login-register-link">Reset password</a>
       </p>
     </header>
+    <script>
+      function onLoginClick() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        fetch("/login", {
+          method: "POST",
+          credentials: "include", // Include the session cookie
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ username, password }),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.message === "Login successful") {
+              // Login successful, redirect to home page or dashboard
+              window.location.href = "/home.html";
+            } else {
+              // Login failed, show error message
+              alert("Login failed: " + data.error);
+            }
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+      }
+    </script>
   </body>
 </html>
