@@ -53,6 +53,26 @@ app.post("/login", async (req, res) => {
     }
 });
 
+app.post('/register', async(req, res) => {
+    try{
+    const { username, email, password, phone_number } = req.body;
+    const existingUser = await User.findOne({ email });
+    if (existingUser){
+        return res.status(409).json({ error: 'User already exists'});
+    }
+    const newUser = await User.create({
+        username,
+        email,
+        password,
+        phone_number
+    });
+    res.json({ message: 'Registered successfully', newUser });
+    } catch (error) {
+        console.error('Error registering user:', error);
+        res.status(400).json({ message: error.message });
+      }
+});
+
 // Logout endpoint
 app.post("/logout", (req, res) => {
     req.session.destroy(err => {
