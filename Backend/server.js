@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(session({
-    secret: 'your-secret-key',
+    secret: '3',
     resave: false,
     saveUninitialized: false,
     cookie: { secure: false } // Note: In production, set this to true and use HTTPS
@@ -44,6 +44,7 @@ const User = mongoose.model("User", UserSchema);
 app.post("/login", async (req, res) => {
     const { username, password } = req.body;
     const user = await User.findOne({ username });
+    console.log(user);
     if (user && bcrypt.compareSync(password, user.password)) {
         req.session.user = user;
         res.json({ message: "Login successful", user });
@@ -54,8 +55,13 @@ app.post("/login", async (req, res) => {
 
 // Logout endpoint
 app.post("/logout", (req, res) => {
-    req.session.destroy();
-    res.json({ message: "Logout successful" });
+    req.session.destroy(err => {
+        if (err) {
+            return res.status(500).json({ error: 'Could not log out, please try again' });
+        } else {
+            return res.json({ message: "Logout successful" });
+        }
+    });
 });
 
 // Middleware to check if user is logged in
