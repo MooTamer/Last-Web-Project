@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Wallpoet&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	font-family: 'Comfortaa', sans-serif;
+}
+
+h1,
+h2,
+h3,
+p {
+	font-family: 'Comfortaa', sans-serif;
+}
+
+.custom-file-upload {
+	margin: auto;
+	width: 130px;
+	height: 130px;
+	border-radius: 50%;
+	cursor: pointer;
+	object-fit: cover;
+	object-position: center center;
+}
+
+.custom-file-upload2 {
+	margin: auto;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	cursor: pointer;
+	object-fit: cover;
+	object-position: center center;
+}
+
+.notifDrop {
+	position: relative;
+	z-index: 9999;
+}

@@ -18,7 +18,7 @@ app.use(
     secret: "3",
     resave: false,
     saveUninitialized: false,
-    cookie: { secure: false }, // Note: In production, set this to true and use HTTPS
+    cookie: { secure: false }, 
   })
 );
 
@@ -38,12 +38,20 @@ const UserSchema = new mongoose.Schema({
     required: true,
     unique: true,
   },
+  phone_number: {
+    type: String,
+    required: false,
+    unique: true,
+  },
 });
 
-// Create User Model
+
 const User = mongoose.model("User", UserSchema);
 
-// Login endpoint
+app.get("/", function (req, res) {
+  res.sendFile(path.join(__dirname + "/home.html"));
+});
+
 app.post("/login", async (req, res) => {
   const { username, password } = req.body;
   const user = await User.findOne({ username });
@@ -90,7 +98,6 @@ app.post("/logout", (req, res) => {
   });
 });
 
-// Middleware to check if user is logged in
 function checkAuth(req, res, next) {
   if (req.session.user) {
     next();
@@ -99,17 +106,16 @@ function checkAuth(req, res, next) {
   }
 }
 
-// Protected route
 app.get("/protected", checkAuth, (req, res) => {
   res.json({ message: "You are authenticated", user: req.session.user });
 });
 
-// Connect to MongoDB
+
 mongoose
   .connect("mongodb://localhost/WebProgramming")
   .then(() => {
     console.log("Connected to MongoDB");
-    // Start the server
+
     app.listen(port, () => {
       console.log(`Server is running on port ${port}`);
     });

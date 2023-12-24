@@ -1,127 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Login</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <title>D&R Auto Sales - Login</title>
     <link
-      href="https://fonts.googleapis.com/css?family=Raleway"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/login.css" />
-
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
-
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-
-    <script src="https://ajax.googleapis.com.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/app.css" />
   </head>
 
-  <body scroll="no" style="overflow: hidden">
-    <!-- Your existing HTML content -->
-
-    <!-- Add Bootstrap JavaScript and Popper.js -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <nav class="navbar navbar-expand-lg mx-auto text-center">
-      <a class="navbar-brand" href="../images/logo1.png"></a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <a class="nav-link" href="home.html">Home</a>
-          <li class="nav-item">
-            <a class="nav-link" href="manufacturers.html">Car Manufacturers</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="cars.html">Cars</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="purchase.html">Purchase</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="login.html">Login</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="signup.html">Sign Up</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="logout.html">Logout</a>
-          </li>
-        </ul>
+  <body class="bg-gray-100">
+    <nav class="bg-blue-500 p-6">
+      <div class="flex items-center justify-between">
+        <div class="text-white text-lg font-bold">D&R Auto Sales</div>
+        <div>
+          <a href="#" class="text-white text-sm">Home</a>
+          <a href="#" class="text-white text-sm ml-4">About</a>
+        </div>
       </div>
     </nav>
 
-    <section
-      class="w3-container w3-content w3-center"
-      style="max-width: 1500px; padding: 0; margin-top: -16px"
-    ></section>
-    <header class="login-header">
-      <i class="fa fa-facebook-official w3-hover-opacity">&nbsp;</i>
-      <i class="fa fa-instagram w3-hover-opacity">&nbsp;</i>
-      <i class="fa fa-snapchat w3-hover-opacity">&nbsp;</i>
-      <i class="fa fa-pinterest-p w3-hover-opacity">&nbsp;</i>
-      <i class="fa fa-twitter w3-hover-opacity">&nbsp;</i>
-      <i class="fa fa-linkedin w3-hover-opacity">&nbsp;</i>
+    <div class="flex items-center justify-center min-h-screen">
+      <div class="w-full max-w-md">
+        <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+          <div class="mb-4">
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="username"
+            >
+              Username
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="username"
+              type="text"
+              placeholder="Username"
+            />
+          </div>
+          <div class="mb-6">
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="password"
+            >
+              Password
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+              id="password"
+              type="password"
+              placeholder="Password"
+            />
+          </div>
+          <div class="flex items-center justify-between">
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              type="button"
+              onclick="onLoginClick()"
+            >
+              Sign In
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
 
-      <h1 class="login-title">LOGIN</h1>
-      <form class="login-form" method="post" action="/login">
-        <div class="form-group">
-          <label for="email" class="login-label">Email</label>
-          <input
-            type="email"
-            class="login-input"
-            id="email"
-            name="email"
-            placeholder="Enter your email"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label for="password" class="login-label">Password</label>
-          <input
-            type="password"
-            class="login-input"
-            id="password"
-            name="password"
-            placeholder="Enter your password"
-            required
-          />
-        </div>
-        <button id="login-button" onclick="onLoginClick()">Login</button>
-      </form>
-      <p class="login-register-text">
-        Don't have an account?
-        <a href="/register" class="login-register-link">Register</a>
-      </p>
-      <p class="login-register-text">
-        Forget your password?
-        <a href="/forgetpassword" class="login-register-link">Reset password</a>
-      </p>
-    </header>
     <script>
       function onLoginClick() {
         const username = document.getElementById("username").value;
@@ -138,10 +82,9 @@
           .then((response) => response.json())
           .then((data) => {
             if (data.message === "Login successful") {
-              // Login successful, redirect to home page or dashboard
-              window.location.href = "/home.html";
+              window.location.href = "Frontend/html/home.html";
             } else {
-              // Login failed, show error message
+
               alert("Login failed: " + data.error);
             }
           })
