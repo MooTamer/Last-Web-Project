@@ -88,15 +88,15 @@
       <i class="fa fa-linkedin w3-hover-opacity">&nbsp;</i>
 
       <h1 class="login-title">LOGIN</h1>
-      <form class="login-form" method="post" action="/login">
+      <form class="login-form" method="post" action="http://localhost:3001/login">
         <div class="form-group">
-          <label for="email" class="login-label">Email</label>
+          <label for="username" class="login-label">Username</label>
           <input
-            type="email"
+            type="text"
             class="login-input"
-            id="email"
-            name="email"
-            placeholder="Enter your email"
+            id="username"
+            name="username"
+            placeholder="Enter your username"
             required
           />
         </div>
@@ -111,15 +111,15 @@
             required
           />
         </div>
-        <button id="login-button" onclick="onLoginClick()">Login</button>
+        <button type="button" id="login-button" onclick="onLoginClick()">Login</button>
       </form>
       <p class="login-register-text">
         Don't have an account?
-        <a href="/register" class="login-register-link">Register</a>
+        <a href="../html/signup.html" class="login-register-link">Register</a>
       </p>
       <p class="login-register-text">
         Forget your password?
-        <a href="/forgetpassword" class="login-register-link">Reset password</a>
+        <a href="" class="login-register-link">Reset password</a>
       </p>
     </header>
     <script>
@@ -127,7 +127,7 @@
         const username = document.getElementById("username").value;
         const password = document.getElementById("password").value;
 
-        fetch("/login", {
+        fetch("http://localhost:3001/login", {
           method: "POST",
           credentials: "include", // Include the session cookie
           headers: {
@@ -139,7 +139,7 @@
           .then((data) => {
             if (data.message === "Login successful") {
               // Login successful, redirect to home page or dashboard
-              window.location.href = "/home.html";
+              window.location.href = "../html/home.html";
             } else {
               // Login failed, show error message
               alert("Login failed: " + data.error);
