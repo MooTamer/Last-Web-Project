@@ -4,27 +4,27 @@ const cors = require("cors");
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
 const bcrypt = require("bcrypt");
+const path = require("path");
 const saltRounds = 10;
-
 
 const app = express();
 const port = 3001;
 
-app.use(cors({
-  origin: "http://127.0.0.1:5501", // Update this with your frontend origin
-  credentials: true,
-}));
+app.use(
+  cors({
+    origin: "http://127.0.0.1:5501", // Update this with your frontend origin
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use(cookieParser());
-
-
 
 app.use(
   session({
     secret: "3",
     resave: false,
     saveUninitialized: false,
-    cookie: { secure: false }, 
+    cookie: { secure: false },
   })
 );
 
@@ -45,19 +45,20 @@ const UserSchema = new mongoose.Schema({
     unique: true,
   },
   phone_number: {
-
     type: String,
     required: false,
     unique: true,
   },
 });
 
-
-
 const User = mongoose.model("User", UserSchema);
 
 app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname + "/home.html"));
+});
+
+app.get("/protected", checkAuth, (req, res) => {
+  res.json({ message: "You are authenticated", user: req.session.user });
 });
 
 app.post("/login", async (req, res) => {
@@ -66,6 +67,7 @@ app.post("/login", async (req, res) => {
   console.log(user);
   if (user && bcrypt.compareSync(password, user.password)) {
     req.session.user = user;
+    console.log("heyy" + req.session);
     res.json({ message: "Login successful", user });
   } else {
     res.status(401).json({ error: "Invalid credentials" });
@@ -101,6 +103,7 @@ app.post("/logout", (req, res) => {
         .status(500)
         .json({ error: "Could not log out, please try again" });
     } else {
+      res.clearCookie("connect.sid"); // Clear the session cookie, replace "connect.sid" with your actual cookie name
       return res.json({ message: "Logout successful" });
     }
   });
@@ -113,10 +116,6 @@ function checkAuth(req, res, next) {
     res.status(401).json({ error: "Not authenticated" });
   }
 }
-
-app.get("/protected", checkAuth, (req, res) => {
-  res.json({ message: "You are authenticated", user: req.session.user });
-});
 
 mongoose
   .connect("mongodb://localhost/WebProgramming")
