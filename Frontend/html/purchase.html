@@ -3,50 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/purchase.css">
-    <link rel="stylesheet" href="../css/navbar.css">
-    
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@1.14.0/dist/full.css" rel="stylesheet">
     <title>D&R Auto Sales</title>
+    <style>
+        .hidden { display: none; }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
 </head>
+<body class="bg-gray-100">
 
-<body>
-
-    <div>
-        <div class="wave"></div>
-        <div class="wave"></div>
-        <div class="wave"></div>
-     </div>
-    <div class="navbar">
-        <a href="home.html">Home</a>
-        <a href="manufacturers.html">Car Manufacturers</a>
-        <a href="cars.html">Cars</a>
-        <a class="active" href="purchase.html">Purchase</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="login.html">Login</a>
-        <a href="signup.html">Sign Up</a>
-        <a href="#">Logout</a>
+<nav class="bg-white p-6 shadow">
+    <div class="flex justify-between">
+        <div>
+            <a href="home.html" class="text-gray-500 text-lg">Home</a>
+            <a href="manufacturers.html" class="ml-6 text-gray-500 text-lg">Car Manufacturers</a>
+            <a href="cars.html" class="ml-6 text-gray-500 text-lg ">Cars</a>
+            <a href="purchase.html" class="ml-6 text-gray-800 text-lg font-semibold">Purchase</a>
+            <a href="contact.html" class="ml-6 text-gray-500 text-lg">Contact Us</a>
+        </div>
+        <div>
+            <a href="login.html" class="text-gray-500 text-lg">Login</a>
+            <a href="signup.html" class="ml-6 text-gray-500 text-lg">Sign Up</a>
+            <a href="#" class="ml-6 text-gray-500 text-lg">Logout</a>
+        </div>
     </div>
+</nav>
 
-    <form class="purchase-form">
-        <h2>Purchase</h2>
-        <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" name="firstName" required>
+<!-- Car 1 -->
+<div x-data="{ showForm: false }" class="flex justify-center items-center mt-8">
+    <div class="max-w-3xl bg-white p-8 rounded-lg shadow-lg flex">
+        <!-- Car Details -->
+        <div class="mr-12">
+            <img src="../images/m1.png" alt="Car Image" class="w-64 mb-6 rounded-md">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-4">BMW M1</h2>
+            <p class="text-xl text-gray-700 mb-6">Stylish sedan. Price: $35,000. Fuel Efficiency: 15 MPG.</p>
+        </div>
 
-        <label for="lastName">Last Name:</label>
-        <input type="text" id="lastName" name="lastName" required>
+        <!-- Purchase Button and Payment Form -->
+        <div class="flex flex-col justify-between">
+            <div class="mb-6">
+                <button @click="showForm = true" class="bg-blue-500 text-white px-8 py-4 rounded-md">Purchase Now</button>
+            </div>
 
-        <label for="nationalID">National ID:</label>
-        <input type="text" id="nationalID" name="nationalID" required>
+            <!-- Payment Form -->
+            <div x-show="showForm" class="mt-6">
+                <form class="space-y-4">
+                    <label class="block">
+                        <span class="text-gray-700">Card Number</span>
+                        <input type="text" class="form-input mt-1 block w-full" placeholder="**** **** **** ****">
+                    </label>
+                    <label class="block">
+                        <span class="text-gray-700">Expiration Date</span>
+                        <input type="text" class="form-input mt-1 block w-full" placeholder="MM / YY">
+                    </label>
+                    <label class="block">
+                        <span class="text-gray-700">CVV</span>
+                        <input type="text" class="form-input mt-1 block w-full" placeholder="***">
+                    </label>
+                    <button type="submit" class="bg-blue-500 text-white px-8 py-4 rounded-md">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+<!-- Car 2 -->
+<div x-data="{ showForm: false }" class="flex justify-center items-center mt-8">
+    <div class="max-w-3xl bg-white p-8 rounded-lg shadow-lg flex">
+        <!-- Car Details -->
+        <div class="mr-12">
+            <img src="../images/m3.png" alt="Car Image" class="w-64 mb-6 rounded-md">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-4">BMW M3</h2>
+            <p class="text-xl text-gray-700 mb-6">Sporty and powerful compact sedan. Price: $70,000. Fuel Efficiency: 22 MPG.</p>
+        </div>
 
-        <label for="contactNumber">Contact Number:</label>
-        <input type="tel" id="contactNumber" name="contactNumber" required>
+        <!-- Purchase Button and Payment Form -->
+        <div class="flex flex-col justify-between">
+            <div class="mb-6">
+                <button @click="showForm = true" class="bg-blue-500 text-white px-8 py-4 rounded-md">Purchase Now</button>
+            </div>
 
-        <button type="purchase">Purchase</button>
-    </form>
-    
+            <!-- Payment Form -->
+            <div x-show="showForm" class="mt-6">
+                <form class="space-y-4">
+                    <label class="block">
+                        <span class="text-gray-700">Card Number</span>
+                        <input type="text" class="form-input mt-1 block w-full" placeholder="**** **** **** ****">
+                    </label>
+                    <label class="block">
+                        <span class="text-gray-700">Expiration Date</span>
+                        <input type="text" class="form-input mt-1 block w-full" placeholder="MM / YY">
+                    </label>
+                    <label class="block">
+                        <span class="text-gray-700">CVV</span>
+                        <input type="text" class="form-input mt-1 block w-full" placeholder="***">
+                    </label>
+                    <button type="submit" class="bg-blue-500 text-white px-8 py-4 rounded-md">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Car 3 -->
+<div x-data="{ showForm: false }" class="flex justify-center items-center mt-8">
+    <div class="max-w-3xl bg-white p-8 rounded-lg shadow-lg flex">
+        <!-- Car Details -->
+        <div class="mr-12">
+            <img src="../images/m5.png" alt="Car Image" class="w-64 mb-6 rounded-md">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-4">BMW M5</h2>
+            <p class="text-xl text-gray-700 mb-6">Powerful and stylish sedan. Price: $80,000. Fuel Efficiency: 20 MPG.</p>
+        </div>
+
+        <!-- Purchase Button and Payment Form -->
+        <div class="flex flex-col justify-between">
+            <div class="mb-6">
+                <button @click="showForm = true" class="bg-blue-500 text-white px-8 py-4 rounded-md">Purchase Now</button>
+            </div>
+
+            <!-- Payment Form -->
+            <div x-show="showForm" class="mt-6">
+                <form class="space-y-4">
+                    <label class="block">
+                        <span class="text-gray-700">Card Number</span>
+                        <input type="text" class="form-input mt-1 block w-full" placeholder="**** **** **** ****">
+                    </label>
+                    <label class="block">
+                        <span class="text-gray-700">Expiration Date</span>
+                        <input type="text" class="form-input mt-1 block w-full" placeholder="MM / YY">
+                    </label>
+                    <label class="block">
+                        <span class="text-gray-700">CVV</span>
+                        <input type="text" class="form-input mt-1 block w-full" placeholder="***">
+                    </label>
+                    <button type="submit" class="bg-blue-500 text-white px-8 py-4 rounded-md">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
