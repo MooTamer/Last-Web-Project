@@ -13,22 +13,34 @@
 </head>
 <body class="bg-gray-100">
 
-<nav class="bg-white p-6 shadow">
-    <div class="flex justify-between">
-        <div>
-            <a href="home.html" class="text-gray-500 text-lg">Home</a>
-            <a href="manufacturers.html" class="ml-6 text-gray-500 text-lg">Car Manufacturers</a>
-            <a href="cars.html" class="ml-6 text-gray-500 text-lg ">Cars</a>
-            <a href="purchase.html" class="ml-6 text-gray-800 text-lg font-semibold">Purchase</a>
-            <a href="contact.html" class="ml-6 text-gray-500 text-lg">Contact Us</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div
+          class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
+        >
+          <a class="brand" href="#">
+            <span class="font-semibold text-xl tracking-tight"
+              >D&R Auto Sales</span
+            >
+          </a>
+          <nav
+            class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center"
+          >
+            <a href="home.html" class="mr-5 hover:text-white">Home</a>
+            <a href="manufacturers.html" class="mr-5 hover:text-white"
+              >Car Manufacturers</a
+            >
+            <a href="cars.html" class="mr-5 hover:text-white">Cars</a>
+            <a href="purchase.html" class="mr-5 hover:text-white">Purchase</a>
+            <a href="contact.html" class="mr-5 hover:text-white active"
+              >Contact Us</a
+            >
+            <a href="login.html" class="mr-5 hover:text-white">Login</a>
+            <a href="signup.html" class="mr-5 hover:text-white">Sign Up</a>
+            <a href="logout.html" class="hover:text-white">Logout</a>
+          </nav>
         </div>
-        <div>
-            <a href="login.html" class="text-gray-500 text-lg">Login</a>
-            <a href="signup.html" class="ml-6 text-gray-500 text-lg">Sign Up</a>
-            <a href="#" class="ml-6 text-gray-500 text-lg">Logout</a>
-        </div>
-    </div>
-</nav>
+      </nav>
+  
 
 <!-- Car 1 -->
 <div x-data="{ showForm: false }" class="flex justify-center items-center mt-8">
