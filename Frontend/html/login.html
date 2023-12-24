@@ -71,9 +71,9 @@
         const username = document.getElementById("username").value;
         const password = document.getElementById("password").value;
 
-        fetch("/login", {
+        fetch("http://localhost:3001/login", {
           method: "POST",
-          credentials: "include", // Include the session cookie
+          credentials: "include",
           headers: {
             "Content-Type": "application/json",
           },
@@ -82,9 +82,8 @@
           .then((response) => response.json())
           .then((data) => {
             if (data.message === "Login successful") {
-              window.location.href = "Frontend/html/home.html";
+              window.location.href = "../html/home.html";
             } else {
-
               alert("Login failed: " + data.error);
             }
           })

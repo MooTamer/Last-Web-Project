@@ -6,12 +6,18 @@ const cookieParser = require("cookie-parser");
 const bcrypt = require("bcrypt");
 const saltRounds = 10;
 
+
 const app = express();
 const port = 3001;
 
-app.use(cors());
+app.use(cors({
+  origin: "http://127.0.0.1:5501", // Update this with your frontend origin
+  credentials: true,
+}));
 app.use(express.json());
 app.use(cookieParser());
+
+
 
 app.use(
   session({
@@ -39,11 +45,13 @@ const UserSchema = new mongoose.Schema({
     unique: true,
   },
   phone_number: {
+
     type: String,
     required: false,
     unique: true,
   },
 });
+
 
 
 const User = mongoose.model("User", UserSchema);
@@ -109,7 +117,6 @@ function checkAuth(req, res, next) {
 app.get("/protected", checkAuth, (req, res) => {
   res.json({ message: "You are authenticated", user: req.session.user });
 });
-
 
 mongoose
   .connect("mongodb://localhost/WebProgramming")
