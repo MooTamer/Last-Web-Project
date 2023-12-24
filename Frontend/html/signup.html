@@ -9,7 +9,7 @@
       href="https://fonts.googleapis.com/css?family=Raleway"
       rel="stylesheet"
     />
-    <!-- <link rel="stylesheet" href="../css/sf-pro-display.css" /> -->
+ 
     <link rel="stylesheet" href="../css/signup.css" />
     <link rel="stylesheet" href="../css/style.css" />
 
@@ -128,7 +128,6 @@
         Already have an account?
         <a href="../html/login.html" class="login-register-link">Login</a>
       </p>
-      <!-- ... Forget password section ... -->
     </header>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -148,7 +147,6 @@
           phone_number: document.getElementById('phone_number').value
         };
   
-        // Make a POST request to the server
         fetch('http://localhost:3001/register', {
           method: 'POST',
           headers: {
@@ -159,7 +157,7 @@
         .then(response => response.json())
         .then(data => {
           console.log('Success:', data);
-          // Optionally, you can redirect the user or perform other actions
+          window.location.href = "../html/login.html";
         })
         .catch((error) => {
           console.error('Error:', error);
