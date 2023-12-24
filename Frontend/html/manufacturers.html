@@ -1,97 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/manufacturers.css">
-    <link rel="stylesheet" href="../css/navbar.css">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@1.14.0/dist/full.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/daisyui@1.14.0/dist/full.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@1.14.0/dist/full.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/app.css" />
     <title>D&R Auto Sales</title>
-</head>
+  </head>
 
-<body>
-    <div>
-        <div class="wave"></div>
-        <div class="wave"></div>
-        <div class="wave"></div>
-     </div>
-     <div class="navbar">
-        <a href="home.html">Home</a>
-        <a class="active" href="manufacturers.html">Car Manufacturers</a>
-        <a href="cars.html">Cars</a>
-        <a href="purchase.html">Purchase</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="login.html">Login</a>
-        <a href="signup.html">Sign Up</a>
-        <a href="#">Logout</a>
+  <body class="bg-gray-100 p-4 text-gray-800">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div
+        class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
+      >
+        <a class="brand" href="#">
+          <span class="font-semibold text-xl tracking-tight"
+            >D&R Auto Sales</span
+          >
+        </a>
+        <nav
+          class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center"
+        >
+          <a href="home.html" class="mr-5 hover:text-white">Home</a>
+          <a href="manufacturers.html" class="mr-5 hover:text-white"
+            >Car Manufacturers</a
+          >
+          <a href="cars.html" class="mr-5 hover:text-white">Cars</a>
+          <a href="purchase.html" class="mr-5 hover:text-white">Purchase</a>
+          <a href="contact.html" class="mr-5 hover:text-white active"
+            >Contact Us</a
+          >
+          <a href="login.html" class="mr-5 hover:text-white">Login</a>
+          <a href="signup.html" class="mr-5 hover:text-white">Sign Up</a>
+          <a href="logout.html" class="hover:text-white">Logout</a>
+        </nav>
+      </div>
+    </nav>
+
+    <div class="container mx-auto p-4">
+      <h1 class="text-4xl font-bold mb-4">Car Manufacturers</h1>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- BMW -->
+        <div class="card bordered">
+          <figure>
+            <img src="../images/bmw-logo-transparent-free-png.webp" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">BMW</h2>
+            <p>
+              Bayerische Motoren Werke AG, commonly known as BMW, is a German
+              multinational company that operates in the automotive and
+              motorcycle industries. Founded in 1916, BMW has evolved into one
+              of the world's leading luxury automakers, renowned for its
+              high-performance vehicles, innovative technology, and sleek
+              design.
+            </p>
+          </div>
+        </div>
+        <!-- Mercedes -->
+        <div class="card bordered">
+          <figure>
+            <img
+              src="../images/mercedes-benz-logo-png-6.png"
+              width="10%"
+              height="10%"
+              alt="Mercedes"
+            />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Mercedes-Benz</h2>
+            <p>
+              Mercedes-Benz is a renowned German luxury automobile manufacturer
+              and a division of Daimler AG. The brand, established in 1926, is
+              synonymous with luxury, innovation, and a commitment to producing
+              high-quality vehicles.
+            </p>
+          </div>
+        </div>
+
+        <!-- MINI -->
+        <div class="card bordered">
+          <figure>
+            <img
+              src="../images/2560px-MINI_logo.svg.png"
+              width="10%"
+              height="10%"
+              alt="MINI"
+            />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">MINI</h2>
+            <p>
+              MINI is a British automotive marque that has become synonymous
+              with compact, stylish, and iconic vehicles. Originally established
+              in 1959 as a response to the fuel shortage and a need for
+              affordable transportation, MINI has evolved into a brand known for
+              its distinctive design and driving fun.
+            </p>
+          </div>
+        </div>
+
+        <!-- Toyota -->
+        <div class="card bordered">
+          <figure>
+            <img
+              src="../images/61291567319275000479abf3.png"
+              width="10%"
+              height="10%"
+              alt="Toyota"
+            />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Toyota</h2>
+            <p>
+              Toyota Motor Corporation, headquartered in Toyota City, Japan, is
+              one of the world's largest and most well-known automotive
+              manufacturers. Founded in 1937 by Kiichiro Toyoda, Toyota has
+              grown to become a global leader in the automotive industry,
+              renowned for its commitment to quality, innovation, and
+              sustainability.
+            </p>
+          </div>
+        </div>
+
+        <!-- Audi -->
+        <div class="card bordered">
+          <figure>
+            <img
+              src="../images/Audi-Logo.png"
+              width="10%"
+              height="10%"
+              alt="Audi"
+            />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Audi</h2>
+            <p>
+              Audi, a German luxury automobile manufacturer, is renowned for
+              producing premium vehicles that blend cutting-edge technology with
+              sophisticated design. Established in 1909 and headquartered in
+              Ingolstadt, Germany, Audi is a key player in the global automotive
+              industry.
+            </p>
+          </div>
+        </div>
+        <!-- Nissan -->
+        <div class="card bordered">
+          <figure>
+            <img
+              src="../images/nissan-logo-B8F2977EFA-seeklogo.com.png"
+              width="10%"
+              height="10%"
+              alt="Audi"
+            />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Nissan</h2>
+            <p>
+              Nissan Motor Company, a Japanese multinational automotive
+              manufacturer, is recognized for its diverse range of vehicles,
+              from compact cars to SUVs and electric vehicles. Founded in 1933,
+              Nissan has become a prominent player in the global automotive
+              industry with a commitment to innovation and reliability.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <div class="manu-information">
-    <div class="logo">
-        <img src="../images/bmw-logo-transparent-free-png.webp" width="10%" height="10%" alt="BMW">
-    </div>
-    <div class="info">
-        <p>Bayerische Motoren Werke AG, commonly known as BMW, is a German multinational company that operates in 
-            the automotive and motorcycle industries. Founded in 1916, BMW has evolved into one of the world's leading 
-            luxury automakers, renowned for its high-performance vehicles, innovative technology, and sleek design.</p>
-    </div>
-
-
-
-    <div class="logo">
-        <img src="../images/mercedes-benz-logo-png-6.png" width="10%" height="10%" alt="Mercedes">
-    </div>
-    <div class="info">
-        <p>Mercedes-Benz is a renowned German luxury automobile manufacturer and a division of Daimler AG. 
-            The brand, established in 1926, is synonymous with luxury, innovation, and a commitment to 
-            producing high-quality vehicles.</p>
-    </div>
-
-
-
-    <div class="logo">
-        <img src="../images/2560px-MINI_logo.svg.png" width="10%" height="10%" alt="Mercedes">
-    </div>
-    <div class="info">
-        <p>MINI is a British automotive marque that has become synonymous with compact, stylish, and iconic vehicles. 
-            Originally established in 1959 as a response to the fuel shortage and a need for affordable transportation, 
-            MINI has evolved into a brand known for its distinctive design and driving fun.</p>
-    </div>
-
-
-
-    <div class="logo">
-        <img src="../images/61291567319275000479abf3.png" width="10%" height="10%" alt="Mercedes">
-    </div>
-    <div class="info">
-        <p>Toyota Motor Corporation, headquartered in Toyota City, Japan, is one of the world's largest and most 
-            well-known automotive manufacturers. Founded in 1937 by Kiichiro Toyoda, Toyota has grown to become a 
-            global leader in the automotive industry, renowned for its commitment to quality, innovation, and sustainability.</p>
-    </div>
-
-
-
-    <div class="logo">
-        <img src="../images/Audi-Logo.png" width="10%" height="10%" alt="Mercedes">
-    </div>
-    <div class="info">
-        <p>Audi, a German luxury automobile manufacturer, is renowned for producing premium vehicles that blend cutting-edge technology
-             with sophisticated design. Established in 1909 and headquartered in Ingolstadt, Germany, Audi is a key player in the global 
-             automotive industry.</p>
-    </div>
-
- 
-
-    <div class="logo">
-        <img src="../images/nissan-logo-B8F2977EFA-seeklogo.com.png" width="10%" height="10%" alt="Mercedes">
-    </div>
-    <div class="bmwinfo">
-        <p>Nissan Motor Company, a Japanese multinational automotive manufacturer, is recognized for its diverse range of vehicles, 
-            from compact cars to SUVs and electric vehicles. Founded in 1933, Nissan has become a prominent player in the global 
-            automotive industry with a commitment to innovation and reliability.</p>
-    </div>
-</div>
-
-
-</body>
+  </body>
 </html>

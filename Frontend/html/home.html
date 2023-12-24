@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>D&R Auto Sales</title>
     <meta charset="UTF-8" />
@@ -9,62 +9,108 @@
       href="https://fonts.googleapis.com/css?family=Raleway"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/app.css">
-    <link rel="stylesheet" href="/path/to/your/tailwind.css">
+    <script src="https://cdn.jsdelivr.net/npm/daisyui@1.14.0/dist/full.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@1.14.0/dist/full.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/app.css" />
   </head>
 
-  <body class="overflow-hidden">
-    <nav class="navbar navbar-expand-lg mx-auto text-center bg-primary text-white">
-      <a class="navbar-brand" href="../images/logo1.png"></a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <a class="nav-link" href="home.html">Home</a>
-          <li class="nav-item">
-            <a class="nav-link" href="manufacturers.html">Car Manufacturers</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="cars.html">Cars</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="purchase.html">Purchase</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="login.html">Login</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="signup.html">Sign Up</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="logout.html">Logout</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <script src="https://cdn.jsdelivr.net/npm/daisyui@1.14.0/dist/full.js"></script>
+      <link
+        href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+        rel="stylesheet"
+      />
+      <link
+        href="https://cdn.jsdelivr.net/npm/daisyui@1.14.0/dist/full.css"
+        rel="stylesheet"
+      />
+      <link rel="stylesheet" href="../css/app.css" />
+    </head>
 
-    <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
-      <div class="w3-display-topleft w3-padding-large w3-xlarge">
+    <body class="overflow-hidden bg-gray-100 p-4">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div
+          class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
+        >
+          <a class="brand" href="#">
+            <span class="font-semibold text-xl tracking-tight"
+              >D&R Auto Sales</span
+            >
+          </a>
+          <nav
+            class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center"
+          >
+            <a href="home.html" class="mr-5 hover:text-white">Home</a>
+            <a href="manufacturers.html" class="mr-5 hover:text-white"
+              >Car Manufacturers</a
+            >
+            <a href="cars.html" class="mr-5 hover:text-white">Cars</a>
+            <a href="purchase.html" class="mr-5 hover:text-white">Purchase</a>
+            <a href="contact.html" class="mr-5 hover:text-white">Contact Us</a>
+            <a href="login.html" class="mr-5 hover:text-white">Login</a>
+            <a href="signup.html" class="mr-5 hover:text-white">Sign Up</a>
+            <a href="logout.html" class="hover:text-white">Logout</a>
+          </nav>
+        </div>
+      </nav>
+      <style>
+        .slide {
+          max-width: 100%;
+          height: auto;
+          object-fit: cover;
+          height: 100%;
+          width: 100%;
+        }
+      </style>
+
+      <div class="carousel w-full">
+        <div id="slide1" class="carousel-item relative w-full">
+          <img src="../images/Home2.jpg" class="w-full" />
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <a href="#slide4" class="btn btn-circle">❮</a>
+            <a href="#slide2" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="slide2" class="carousel-item relative w-full">
+          <img src="../images/Home3.jpg" class="w-full" />
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <a href="#slide1" class="btn btn-circle">❮</a>
+            <a href="#slide3" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="slide3" class="carousel-item relative w-full">
+          <img src="../images/Home4.jpg" class="w-full" />
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <a href="#slide2" class="btn btn-circle">❮</a>
+            <a href="#slide4" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="slide4" class="carousel-item relative w-full">
+          <img src="../images/Home2.jpg" class="w-full" />
+          <div
+            class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+          >
+            <a href="#slide3" class="btn btn-circle">❮</a>
+            <a href="#slide1" class="btn btn-circle">❯</a>
+          </div>
+        </div>
       </div>
-      <div class="w3-display-middle">
-        <h1 class="w3-jumbo w3-animate-top">D&R Auto Sales</h1>
-        <hr class="w3-border-grey" style="margin: auto; width: 40%" />
-        <p class="w3-large w3-center">
-          © 2023 D&R Auto Sales. All Rights Reserved
-        </p>
-      </div>
-    </div>
-  </body>
+    </body>
+  </html>
 </html>

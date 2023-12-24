@@ -1,75 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/navbar.css">
-    <link rel="stylesheet" href="../css/contact.css">
-    
-    <title>D&R Auto Sales</title>
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <script src="https://cdn.jsdelivr.net/npm/daisyui@1.14.0/dist/full.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@1.14.0/dist/full.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../css/app.css" />
+        <title>Contact Us - D&R Auto Sales</title>
+    </head>
 
-<body>
-    <div class="navbar">
-        <a href="home.html">Home</a>
-        <a href="manufacturers.html">Car Manufacturers</a>
-        <a href="cars.html">Cars</a>
-        <a href="purchase.html">Purchase</a>
-        <a class="active" href="cars.html">Contact Us</a>
-        <a href="login.html">Login</a>
-        <a href="signup.html">Sign Up</a>
-        <a href="#">Logout</a>
-    </div>
+    <style>
+        .hidden { display: none; }
+    </style>
 
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/contact.css">
-    <link rel="stylesheet" href="../css/navbar.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-TX+DbQ/G1Up8r6L3lxI46l5Fv0i8TctO9G1yV6FgffBqRPj9L/9Wbss+p8Up/VJX" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <title>Contact Us - D&R Auto Sales</title>
-</head>
+    <body class="bg-gray-100 p-4">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+                <a class="brand" href="#">
+                    <span class="font-semibold text-xl tracking-tight">D&R Auto Sales</span>
+                </a>
+                <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+                    <a href="home.html" class="mr-5 hover:text-white">Home</a>
+                    <a href="manufacturers.html" class="mr-5 hover:text-white">Car Manufacturers</a>
+                    <a href="cars.html" class="mr-5 hover:text-white">Cars</a>
+                    <a href="purchase.html" class="mr-5 hover:text-white">Purchase</a>
+                    <a href="contact.html" class="mr-5 hover:text-white active">Contact Us</a>
+                    <a href="login.html" class="mr-5 hover:text-white">Login</a>
+                    <a href="signup.html" class="mr-5 hover:text-white">Sign Up</a>
+                    <a href="logout.html" class="hover:text-white">Logout</a>
+                </nav>
+            </div>
+        </nav>
 
-<body>
+        <div class="container mx-auto p-4">
+            <h1 class="text-4xl text-gray-800 font-bold mb-4">Contact Us</h1>
+            <p class="mb-4 text-gray-800">
+                We'd love to hear from you! Reach out to us using the contact information below.
+            </p>
 
-    <div>
-        <div class="wave"></div>
-        <div class="wave"></div>
-        <div class="wave"></div>
-     </div>
+            <div class="contact-details text-gray-800 mb-4">
+                <p><strong>Address:</strong> North, Second Sector, 259 N 90th Street - Service Ln, New Cairo 1, Cairo Governorate</p>
+                <p><strong>Email:</strong> info@drautosales.com</p>
+                <p><strong>Hotline:</strong> 190991</p>
+            </div>
 
-
-    <div class="contact-container">
-        <h1>Contact Us</h1>
-        <p>We'd love to hear from you! Reach out to us using the contact information below.</p>
-
-        <div class="contact-details">
-            <p><strong>Address:</strong> North, Second Sector, 259 N 90th Street - Service Ln, New Cairo 1, Cairo Governorate</p>
-            <p><strong>Email:</strong> info@drautosales.com</p>
-            <p><strong>Hotline:</strong> 190991</p>
-        </div>
-
-        <div class="map-container">
-            <div class="map">
-                <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.6789!2d-86.1234567!3d39.1234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886b6a7c3f158ab9%3A0x1234567890abcdef!2sD%26R%20Auto%20Sales!5e0!3m2!1sen!2sus"
-            width="600"
-            height="450"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-         ></iframe>
+            <div class="map-container">
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.6789!2d-86.1234567!3d39.1234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886b6a7c3f158ab9%3A0x1234567890abcdef!2sD%26R%20Auto%20Sales!5e0!3m2!1sen!2sus" width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
+                </div>
             </div>
         </div>
-    </div>
-
-</body>
-</html>
-
-    
-
-</body>
+    </body>
 </html>
