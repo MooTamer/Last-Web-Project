@@ -8,17 +8,44 @@
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/daisyui@1.14.0/dist/full.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@1.14.0/dist/full.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../css/app.css" />
   </head>
 
   <body class="bg-gray-100">
-    <nav class="bg-blue-500 p-6">
-      <div class="flex items-center justify-between">
-        <div class="text-white text-lg font-bold">D&R Auto Sales</div>
-        <div>
-          <a href="#" class="text-white text-sm">Home</a>
-          <a href="#" class="text-white text-sm ml-4">About</a>
-        </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div
+        class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
+      >
+        <a class="brand" href="#">
+          <span class="font-semibold text-xl tracking-tight"
+            >D&R Auto Sales</span
+          >
+        </a>
+        <nav
+          class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center"
+        >
+          <a href="home.html" class="mr-5 hover:text-white">Home</a>
+          <a href="manufacturers.html" class="mr-5 hover:text-white"
+            >Car Manufacturers</a
+          >
+          <a href="cars.html" class="mr-5 hover:text-white">Cars</a>
+          <a href="purchase.html" class="mr-5 hover:text-white">Purchase</a>
+          <a href="contact.html" class="mr-5 hover:text-white active"
+            >Contact Us</a
+          >
+          <a href="login.html" class="mr-5 hover:text-white">Login</a>
+          <a href="signup.html" class="mr-5 hover:text-white">Sign Up</a>
+          <a href="logout.html" class="hover:text-white">Logout</a>
+        </nav>
       </div>
     </nav>
 

@@ -4,166 +4,134 @@
     <title>Sign Up</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css?family=Raleway"
       rel="stylesheet"
     />
- 
-    <link rel="stylesheet" href="../css/signup.css" />
-    <link rel="stylesheet" href="../css/style.css" />
-
     <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
-
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-
-    <script src="https://ajax.googleapis.com.5.1/jquery.min.js"></script>
-  <body scroll="no" style="overflow: hidden">
-
-    <nav class="navbar navbar-expand-lg mx-auto text-center">
-        <a class="navbar-brand" href="../images/logo1.png"></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-            <a class="nav-link" href="home.html">Home</a>
-            <li class="nav-item">
-              <a class="nav-link" href="manufacturers.html">Car Manufacturers</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="cars.html">Cars</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="purchase.html">Purchase</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="login.html">Login</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="signup.html">Sign Up</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="logout.html">Logout</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-
-    <header class="login-header">
-      <i class="fa fa-facebook-official w3-hover-opacity">&nbsp;</i>
-      <i class="fa fa-instagram w3-hover-opacity">&nbsp;</i>
-      <i class="fa fa-snapchat w3-hover-opacity">&nbsp;</i>
-      <i class="fa fa-pinterest-p w3-hover-opacity">&nbsp;</i>
-      <i class="fa fa-twitter w3-hover-opacity">&nbsp;</i>
-      <i class="fa fa-linkedin w3-hover-opacity">&nbsp;</i>
-
-      <h1 class="login-title">SIGN UP</h1>
-      <form class="login-form" method="post" action="http://localhost:3001/register">
-        <div class="form-group">
-          <label for="username" class="login-label">Username</label>
+    <script src="https://cdn.jsdelivr.net/npm/daisyui@1.11.0/dist/full.js"></script>
+    <style>
+      /* Responsive design */
+      @media (max-width: 640px) {
+        .login-form {
+          width: 90%;
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gray-100 flex items-center justify-center"
+    style="height: 100vh"
+  >
+    <div class="bg-white p-8 rounded-lg shadow-md w-96">
+      <h2 class="text-2xl font-bold mb-5 text-gray-900">Sign Up</h2>
+      <form
+        class="login-form"
+        method="post"
+        action="http://localhost:3001/register"
+      >
+        <div class="mb-5">
+          <label for="username" class="block mb-2 text-sm text-gray-600"
+            >Username</label
+          >
           <input
             type="text"
-            class="login-input"
             id="username"
             name="username"
             placeholder="Enter your username"
             required
+            class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:placeholder-gray-600 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-900"
           />
         </div>
-        <div class="form-group">
-          <label for="email" class="login-label">Email</label>
+        <div class="mb-5">
+          <label for="email" class="block mb-2 text-sm text-gray-600"
+            >Email</label
+          >
           <input
             type="email"
-            class="login-input"
             id="email"
             name="email"
             placeholder="Enter your email"
             required
+            class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:placeholder-gray-600 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-900"
           />
         </div>
-        <div class="form-group">
-            <label for="password" class="login-label">Password</label>
-            <input
-              type="password"
-              class="login-input"
-              id="password"
-              name="password"
-              placeholder="Create a password"
-              required
-            />
-          </div>
-    <div class="form-group">
-      <label for="Phone number" class="login-label">Phone number</label>
-      <input
-        type="number"
-        class="login-input"
-        id="phone_number"
-        name="phone_number"
-        placeholder="Enter your phone number"
-        required
-      />
-    </div>
-        <button id="signup-button">Sign Up</button>
+        <div class="mb-5">
+          <label for="password" class="block mb-2 text-sm text-gray-600"
+            >Password</label
+          >
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Create a password"
+            required
+            class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:placeholder-gray-600 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-900"
+          />
+        </div>
+        <div class="mb-5">
+          <label for="phone_number" class="block mb-2 text-sm text-gray-600"
+            >Phone number</label
+          >
+          <input
+            type="number"
+            id="phone_number"
+            name="phone_number"
+            placeholder="Enter your phone number"
+            required
+            class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:placeholder-gray-600 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-900"
+          />
+        </div>
+        <button
+          id="signup-button"
+          class="w-full py-2 px-4 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-opacity-75"
+        >
+          Sign Up
+        </button>
       </form>
-      <p class="login-register-text">
+      <p class="mt-3 text-sm text-gray-600">
         Already have an account?
-        <a href="../html/login.html" class="login-register-link">Login</a>
+        <a
+          href="../html/login.html"
+          class="text-indigo-500 hover:text-indigo-600"
+          >Login</a
+        >
       </p>
-    </header>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("signup-button")
+          .addEventListener("click", function (event) {
+            event.preventDefault();
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  </body>
+            const formData = {
+              username: document.getElementById("username").value,
+              email: document.getElementById("email").value,
+              password: document.getElementById("password").value,
+              phone_number: document.getElementById("phone_number").value,
+            };
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      document.getElementById('signup-button').addEventListener('click', function(event) {
-        event.preventDefault();
-  
-        const formData = {
-          username: document.getElementById('username').value,
-          email: document.getElementById('email').value,
-          password: document.getElementById('password').value,
-          phone_number: document.getElementById('phone_number').value
-        };
-  
-        fetch('http://localhost:3001/register', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(formData),
-        })
-        .then(response => response.json())
-        .then(data => {
-          console.log('Success:', data);
-          window.location.href = "../html/login.html";
-        })
-        .catch((error) => {
-          console.error('Error:', error);
-        });
+            fetch("http://localhost:3001/register", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(formData),
+            })
+              .then((response) => response.json())
+              .then((data) => {
+                console.log("Success:", data);
+                window.location.href = "../html/login.html";
+              })
+              .catch((error) => {
+                console.error("Error:", error);
+              });
+          });
       });
-    });
-  </script>
-  
+    </script>
+  </body>
 </html>
